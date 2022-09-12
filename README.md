@@ -21,3 +21,5 @@ Prerequisites:
 * Please note that as the program downloads tests, it will delete the test element from the page. It **is not deleting your actual tests** out of Test Project. If you refresh the page they will come back!
 
 * I use windows and chrome. Unsure of how this will perform on other Operating Systems and Browsers.
+
+![Demo](Tool.gif)

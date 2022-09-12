@@ -18,8 +18,6 @@ Prerequisites:
 4. Run the command: ```` python -m robot -A settings .````
 
 ### Notes:   ###
-Please note that as the program downloads tests, it will delete the test element from the page. It **is not deleting your actual tests** out of Test Project. If you refresh the page they will come back!
+* Please note that as the program downloads tests, it will delete the test element from the page. It **is not deleting your actual tests** out of Test Project. If you refresh the page they will come back!
 
-### Future Additions ###
-If Test Project continues to go down hill I may develop other tools to assist in running these on Selenium/Appium
-
+* I use windows and chrome. Unsure of how this will perform on other Operating Systems and Browsers.

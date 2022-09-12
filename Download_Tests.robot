@@ -80,7 +80,7 @@ Download Test Cases In Folder
     ${web_test_count}=      Get Text    xpath=${web_test_counter}
     ${total_count}=         Evaluate   int(${android_test_count})+int(${ios_test_count})+int(${web_test_count})
 
-    Mouse Over    ${scroll_bar}
+    Run Keyword and Ignore Error    Mouse Over    ${scroll_bar}
     ${con}=    Run Keyword And Return Status    Element Should Be Visible    ${scroll_bar}
     ${scrolled} =    Set Variable    ${con}
     # Scroll Down to load all tests
@@ -104,7 +104,7 @@ Download Test Cases In Folder
     ${items}=    Get Webelements    ${item_context_menu}
     Log Many    @{items}
     FOR    ${item}    IN    @{items}
-        Download Test Case    ${item}
+        Run Keyword And Ignore Error    Download Test Case    ${item}
         Execute Javascript    var element=document.querySelector('.project-test-bundle:first-child');
         ...  element.parentNode.removeChild(element);
     END
@@ -124,6 +124,7 @@ Download Test Cases In Folder
             Click Element    //span[text()="${folder}"]
             Download Test Cases In Folder
         END
+
         ${subfolder}=    Run Keyword And Return Status    Element Should Be Visible    ${up_to_button}
         IF    ${subfolder}
             Click Element    ${up_to_button}

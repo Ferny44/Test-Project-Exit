@@ -80,6 +80,7 @@ Download Test Cases In Folder
     ${web_test_count}=      Get Text    xpath=${web_test_counter}
     ${total_count}=         Evaluate   int(${android_test_count})+int(${ios_test_count})+int(${web_test_count})
 
+    Sleep    5s
     Run Keyword and Ignore Error    Mouse Over    ${scroll_bar}
     ${con}=    Run Keyword And Return Status    Element Should Be Visible    ${scroll_bar}
     ${scrolled} =    Set Variable    ${con}

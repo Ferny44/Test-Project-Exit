@@ -1,0 +1,10 @@
+-v username:youremail@gmail.com
+-v password:Password1234
+
+# Language Options: Java, C#, Python
+-v language:Python
+-v browser:chrome
+
+# Scroll Drag and Drop Offset. May need to decrease this if you see the test fail as it may behave differently
+# on other resolutions (mine are standard 1440p)
+-v DDOffset:50
